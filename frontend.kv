@@ -13,13 +13,13 @@
             Button:
                 text: 'Using a sound file (.wav)'
                 on_press: root.from_file()
-                background_normal: 'images/normal.png'
-                background_down: 'images/down.png'
+                background_normal: 'normal.png'
+                background_down: 'down.png'
             Button:
                 text: 'Using a mic (must have mic)'
                 on_press: root.from_mic()
-                background_normal: 'images/normal.png'
-                background_down: 'images/down.png'
+                background_normal: 'normal.png'
+                background_down: 'down.png'
 
 <MicScreen>:
     GridLayout:
@@ -36,8 +36,8 @@
             id: start_button
             text: 'Start Microphone'
             on_press: root.start()
-            background_normal: 'images/normal.png'
-            background_down: 'images/down.png'
+            background_normal: 'normal.png'
+            background_down: 'down.png'
             size_hint_y: 0.1
 
 <AudioScreen>:
@@ -51,8 +51,8 @@
         Button:
             text: 'Convert'
             on_press: root.convert()
-            background_normal: 'images/normal.png'
-            background_down: 'images/down.png'
+            background_normal: 'normal.png'
+            background_down: 'down.png'
             size_hint_y:0.1
 
 <DisplayScreen>:
@@ -70,13 +70,13 @@
                 id: copy_button
                 text: 'Copy link'
                 on_press: root.copy()
-                background_normal: 'images/normal.png'
-                background_down: 'images/down.png'
+                background_normal: 'normal.png'
+                background_down: 'down.png'
             Button:
                 text: 'Open link'
                 on_press: root.open()
-                background_normal: 'images/normal.png'
-                background_down: 'images/down.png'
+                background_normal: 'normal.png'
+                background_down: 'down.png'
 
 <RootWidget>:
     canvas.before:
