@@ -1,4 +1,4 @@
-import os.path
+import os
 
 from kivy.uix.screenmanager import Screen, ScreenManager
 from kivy.app import App
@@ -61,8 +61,10 @@ class MicScreen(Screen):
 class AudioScreen(Screen):
 
     def convert(self):
+        home = os.path.expanduser("~")
+        os.chdir(os.path.join(home, "Downloads"))
+        
         r = sr.Recognizer()
-        os.chdir('/Users/vishalzinjuvadia/Downloads/')
         audio_file = os.path.abspath(self.ids.file.text)
         audio_file = sr.AudioFile(audio_file)
 
