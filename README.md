@@ -5,6 +5,3 @@ To run this, go to terminal and type (one at a time!!!): 'pip3 install kivy', 'p
 Then click on the code tab here and you should see 'HTTPS' and see a url. Copy that url. 
 Then, in the your terminal/command prompt, type: 'git clone <insert url>'
 Then change your directory to wherever you cloned the project. Then type in the terminal: 'python main.py'
-  
-  
-Requires Python 3.x and kivy, filestack-python, and SpeechRecognition
