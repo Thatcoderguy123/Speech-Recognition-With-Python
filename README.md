@@ -1,6 +1,8 @@
 # Speech-Recognition-With-Python
 Don't you just hate taking notes on lectures and videos? Well, if you do, you came to the right place. Here, we convert audio from a .wav file or use your microphone's input to convert it to text.
 
+BTW THIS WON'T WORK ON MACBOOK's WITH M1 CHIP IN THEM
+
 To run this, go to terminal and type (one at a time!!!): 'pip3 install kivy', 'pip3 install SpeechRecognition', 'pip3 install filestack-python'
 Then do: 'mkdir github'
 Then: 'cd github'
