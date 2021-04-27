@@ -1,0 +1,99 @@
+<StartScreen>:
+    GridLayout:
+        cols: 1
+        padding: 10
+        spacing: 10
+
+        Label:
+            text: root.welcome_text
+            size_hint_y: 0.9
+        GridLayout:
+            size_hint_y: 0.1
+            cols: 2
+            Button:
+                text: 'Using a sound file (.wav)'
+                on_press: root.from_file()
+                background_normal: 'images/normal.png'
+                background_down: 'images/down.png'
+            Button:
+                text: 'Using a mic (must have mic)'
+                on_press: root.from_mic()
+                background_normal: 'images/normal.png'
+                background_down: 'images/down.png'
+
+<MicScreen>:
+    GridLayout:
+        cols: 1
+        padding: 10
+        spacing: 10
+        Image:
+            source: root.mic_image
+            size_hint_y: 0.6
+        TextInput:
+            id: time_text
+            size_hint_y: 0.3
+        Button:
+            id: start_button
+            text: 'Start Microphone'
+            on_press: root.start()
+            background_normal: 'images/normal.png'
+            background_down: 'images/down.png'
+            size_hint_y: 0.1
+
+<AudioScreen>:
+    GridLayout:
+        cols: 1
+        padding: 10
+        spacing: 10
+        TextInput:
+            id: file
+            size_hint_y: 0.1
+        Button:
+            text: 'Convert'
+            on_press: root.convert()
+            background_normal: 'images/normal.png'
+            background_down: 'images/down.png'
+            size_hint_y:0.1
+
+<DisplayScreen>:
+    GridLayout:
+        cols: 1
+        padding: 10
+        spacing: 10
+        Label:
+            id: link_text
+            size_hint_y: 0.9
+        GridLayout:
+            size_hint_y: 0.1
+            cols: 2
+            Button:
+                id: copy_button
+                text: 'Copy link'
+                on_press: root.copy()
+                background_normal: 'images/normal.png'
+                background_down: 'images/down.png'
+            Button:
+                text: 'Open link'
+                on_press: root.open()
+                background_normal: 'images/normal.png'
+                background_down: 'images/down.png'
+
+<RootWidget>:
+    canvas.before:
+        Color:
+            rgba: (0.3, 0.4, 0.1, 0.85)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    StartScreen:
+        id: start_screen
+        name: 'start_screen'
+    MicScreen:
+        id: mic_screen
+        name: 'mic_screen'
+    AudioScreen:
+        id: audio_screen
+        name: 'audio_screen'
+    DisplayScreen:
+        id: display_screen
+        name: 'display_screen'
